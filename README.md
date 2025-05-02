@@ -26,7 +26,7 @@ Manual drop ─┘
 **Pipeline explained**
 1. **Extract & Load** – `excel_to_sqlite.py` unmerges cells, normalises headers and writes one *raw* table per sheet.
 2. **Transform** – a suite of `vf_*.sql` scripts cleanses the data: splits composite site‑codes, coerces numeric types and computes derived KPIs.
-3. **Virtualize** – RAW reads the *views* directly and compiles them into an OpenAPI 3.1 contract during the container build. The contract is served by the Gateway pod and version‑pinned via semantic tags.
+3. **Virtualiσe** – RAW reads the *views* directly and compiles them into an OpenAPI 3.1 contract during the container build. The contract is served by the Gateway pod and version‑pinned via semantic tags.
 4. **Consume** – Squirro Chat, BI dashboards or curl scripts call the endpoints; responses stream as JSON (or CSV if `Accept: text/csv`).
 
 The combined solution runs on a single‑node **k3s** cluster inside Vodafone’s private GCP VPC; images are pulled from a signed ECR registry and refreshed every five hours.
