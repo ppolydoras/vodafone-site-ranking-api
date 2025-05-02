@@ -1,0 +1,9 @@
+{
+    "template": "VF Sites Ranking API",
+    "credentials": [
+        {
+            "type": "CUSTOM",
+            "name": "vdf"
+        }
+    ]
+}
